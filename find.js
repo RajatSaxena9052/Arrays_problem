@@ -4,7 +4,7 @@ if(arr == undefined || arr.length == 0 || Array.isArray(arr) === false){
     }
 else{
     function base(arr){
-            for(var i=0;i<arr.length;i++){
+            for(let i=0;i<arr.length;i++){
                 if( cb(arr[i]) == true){
                      return arr[i]       
                 }
