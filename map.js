@@ -3,7 +3,7 @@ function map(arr,cb){
         return []
     }
     else{
-        var newArr=[]
+        let newArr=[]
         for(var index=0;index<arr.length;index++){
             newArr.push(cb(arr[index],index,arr))
         }
