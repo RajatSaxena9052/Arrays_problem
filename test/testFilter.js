@@ -1,5 +1,7 @@
 var filter = require("../filter")
-const array = [1,-2,3,-4]
+const array = [1,-2,3,-4,-5]
 
-const result = filter(array)
+let cb = (a,i,arr) => a == arr[i];
+
+const result = filter(array,cb)
 console.log(result)

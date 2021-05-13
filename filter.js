@@ -1,20 +1,15 @@
-function filter(arr){
-    if(arr == undefined || arr.length == 0 || Array.isArray(arr) === false){
+function filter(arr,cb){
+    if(cb == undefined || typeof cb != 'function' || arr == undefined || arr.length == 0 || Array.isArray(arr) === false)
+    {
         return []
-        }
+    }
     else{
-        const newArr=[]
-        function base(arr){
-                for(let i=0;i<arr.length;i++){
-                    cb(arr[i])       
-                    }
-                }
-        function cb(ele){
-                    if(ele > 2){
-                        newArr.push(ele)
-                    }
-                }
-            base(arr,cb)
+            const newArr=[]
+        for(let index = 0;index < arr.length;index++){
+            if(cb(arr[index],index,arr) == true){
+                    newArr.push(arr[index]);
+            }
+        }
         return newArr
     }
 }
