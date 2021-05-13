@@ -1,5 +1,5 @@
 function fn(nestedArray){
-    if(typeof nestedArray != 'object' || nestedArray == undefined || nestedArray.length == 0){
+    if(typeof nestedArray != 'object' || nestedArray == undefined || nestedArray.length == 0 || Array.isArray(nestedArray) == false){
         return []
     }
     else{
