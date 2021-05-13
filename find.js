@@ -1,20 +1,15 @@
-function find(arr){
-if(arr == undefined || arr.length == 0 || Array.isArray(arr) === false){
+function find(arr,cb){
+if(cb == undefined || typeof cb != 'function' || arr == undefined || arr.length == 0 || Array.isArray(arr) === false){
     return []
     }
 else{
-    function base(arr){
-            for(let i=0;i<arr.length;i++){
-                if( cb(arr[i]) == true){
-                     return arr[i]       
+    for(let index = 0;index<arr.length;index++){
+        if(cb(arr[index],index,arr) == true){
+            return arr[index]       
                 }
             }
-    }
-    function cb(ele){
-                return ele > 3
-            }
-        return base(arr,cb)
-    }
+    return undefined
+        }
 }
 
 module.exports = find;
