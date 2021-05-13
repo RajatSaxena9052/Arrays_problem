@@ -1,6 +1,7 @@
 var fn = require("../map")
-let i="";
-const arr =[ 1, 2,3, 4];
+const arr =[1, 2, 3, 4];
 
-const result = fn(arr,i)
+const cb = (i) => i*i;
+
+const result = fn(arr,(i) => i*i)
 console.log(result)
