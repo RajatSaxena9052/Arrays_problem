@@ -6,7 +6,7 @@ function fn(arr,i){
         let newArr=[]
 
         function base(arr,cbWith){
-            for(var i=0;i<arr.length;i++){
+            for(let i=0;i<arr.length;i++){
                 cbWith(arr[i],i)
             }
         }
