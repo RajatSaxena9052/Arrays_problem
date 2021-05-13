@@ -3,15 +3,15 @@ function fn(nestedArray){
         return []
     }
     else{
-    var newArray = []
-    function flatten(nestedArray){
+    let newArray = []
+        function flatten(nestedArray){
 
-        for(var i=0;i<nestedArray.length;i++){
-                if(typeof nestedArray[i] == 'object'){
-                    flatten(nestedArray[i])
+            for(let index=0;index<nestedArray.length;index++){
+                if(typeof nestedArray[index] == 'object'){
+                    flatten(nestedArray[index])
                 }
                 else{
-                    newArray.push(nestedArray[i])
+                    newArray.push(nestedArray[index])
                 }
             }
             return newArray
