@@ -1,20 +1,20 @@
-function reduce(arr,cb,startValue){
-    if(cb == undefined || arr == undefined || arr.length == 0 || Array.isArray(arr) === false){
+function reduce(arr, cb, startValue) {
+    if (cb == undefined || arr == undefined || arr.length == 0 || Array.isArray(arr) === false) {
         return []
-        }
-    else{
+    }
+    else {
         let aggr = startValue;
-        
-        if(Boolean(startValue)==false){
+
+        if (Boolean(startValue) == false) {
             startValue = 0
             aggr = startValue
         }
-        for(let i=0;i<arr.length;i++){  
-            aggr = cb(aggr, arr[i]) 
-            }
-            return aggr
+        for (let i = 0; i < arr.length; i++) {
+            aggr = cb(aggr, arr[i])
         }
-    
+        return aggr
     }
-    
-    module.exports = reduce;
+
+}
+
+module.exports = reduce;

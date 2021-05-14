@@ -1,11 +1,11 @@
-function map(arr,cb){
-    if(cb == undefined || typeof cb != 'function' || typeof arr != 'object' || arr == undefined || arr.length == 0 || Array.isArray(arr) == false){
+function map(arr, cb) {
+    if (cb == undefined || typeof cb != 'function' || typeof arr != 'object' || arr == undefined || arr.length == 0 || Array.isArray(arr) == false) {
         return []
     }
-    else{
-        let newArr=[]
-        for(var index=0;index<arr.length;index++){
-            newArr.push(cb(arr[index],index,arr))
+    else {
+        let newArr = []
+        for (var index = 0; index < arr.length; index++) {
+            newArr.push(cb(arr[index], index, arr))
         }
         return newArr
     }
