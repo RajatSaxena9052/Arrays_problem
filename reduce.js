@@ -1,18 +1,18 @@
-function reduce(arr, cb, startValue) {
-    if (cb == undefined || arr == undefined || arr.length == 0 || Array.isArray(arr) === false) {
+function reduce(array, callBack, startValue) {
+    if (callBack == undefined || array == undefined || array.length == 0 || Array.isArray(array) === false) {
         return []
     }
     else {
-        let aggr = startValue;
+        let reducer = startValue;
 
         if (Boolean(startValue) == false) {
             startValue = 0
-            aggr = startValue
+            reducer = startValue
         }
-        for (let i = 0; i < arr.length; i++) {
-            aggr = cb(aggr, arr[i])
+        for (let i = 0; i < array.length; i++) {
+            reducer = callBack(reducer, array[i])
         }
-        return aggr
+        return reducer
     }
 
 }

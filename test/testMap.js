@@ -1,8 +1,8 @@
 var map = require("../map")
-const arr = [1, 2, 3, 4, 5];
+const array = [1, 2, 3, 4, 5];
 
-let cb = (ele, ind, arr) => ele * ele;
+let callBack = (element, index, arr) => element * element;
 
-const result = map(arr, cb);
+const result = map(array, callBack);
 
 console.log(result);

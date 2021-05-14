@@ -1,11 +1,11 @@
-function find(arr, cb) {
-    if (cb == undefined || typeof cb != 'function' || arr == undefined || arr.length == 0 || Array.isArray(arr) === false) {
+function find(array, callBack) {
+    if (callBack == undefined || typeof callBack != 'function' || array == undefined || array.length == 0 || Array.isArray(array) === false) {
         return []
     }
     else {
-        for (let index = 0; index < arr.length; index++) {
-            if (cb(arr[index], index, arr) == true) {
-                return arr[index]
+        for (let index = 0; index < array.length; index++) {
+            if (callBack(array[index], index, array) == true) {
+                return array[index]
             }
         }
         return undefined

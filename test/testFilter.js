@@ -1,7 +1,7 @@
 let filter = require("../filter")
 const array = [1, -2, 3, -4, -5]
 
-let cb = (a, i, arr) => a == arr[i];
+let callBack = (element, index, arr) => element == arr[index];
 
-const result = filter(array, cb)
+const result = filter(array, callBack)
 console.log(result)

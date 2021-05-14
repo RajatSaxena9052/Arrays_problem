@@ -1,11 +1,11 @@
-function map(arr, cb) {
-    if (cb == undefined || typeof cb != 'function' || typeof arr != 'object' || arr == undefined || arr.length == 0 || Array.isArray(arr) == false) {
+function map(array, callBack) {
+    if (callBack == undefined || typeof callBack != 'function' || typeof array != 'object' || array == undefined || array.length == 0 || Array.isArray(array) == false) {
         return []
     }
     else {
         let newArr = []
-        for (var index = 0; index < arr.length; index++) {
-            newArr.push(cb(arr[index], index, arr))
+        for (var index = 0; index < array.length; index++) {
+            newArr.push(callBack(array[index], index, array))
         }
         return newArr
     }

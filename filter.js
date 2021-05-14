@@ -1,16 +1,15 @@
-function filter(arr, cb) {
-    if (cb == undefined || typeof cb != 'function' || arr == undefined || arr.length == 0 || Array.isArray(arr) === false) {
+function filter(array, callBack) {
+    if (callBack == undefined || typeof callBack != 'function' || array == undefined || array.length == 0 || Array.isArray(array) === false) {
         return []
     }
     else {
-        const newArr = []
-        for (let index = 0; index < arr.length; index++) {
-            if (cb(arr[index], index, arr) == true) {
-                newArr.push(arr[index]);
+        const newArray = []
+        for (let index = 0; index < array.length; index++) {
+            if (callBack(array[index], index, array) == true) {
+                newArray.push(array[index]);
             }
         }
-        return newArr
+        return newArray;
     }
 }
-
 module.exports = filter;
