@@ -1,5 +1,5 @@
 function find(array, callBack) {
-    if (callBack == undefined || typeof callBack != 'function' || array == undefined || array.length == 0 || Array.isArray(array) === false) {
+    if (callBack == undefined || typeof callBack != 'function' || array == undefined || Array.isArray(array) === false) {
         return []
     }
     else {

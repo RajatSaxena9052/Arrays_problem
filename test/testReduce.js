@@ -1,11 +1,10 @@
 var reduce = require("../reduce")
 
-const array = [1, 2, 3, 4, 5, 5]
-const startValue = 0;
+const array = [9, 6, 8, 7];
+let startValue = 10
 
-let callBack = ((accumulator, current, index, ar) => accumulator + (current ** 3))
+let callBack = ((accumulator, current, index, arr) => accumulator + (current + arr[index]))
 
 const result = reduce(array, callBack, startValue);
-
-console.log(result)
+console.log(result);
 
