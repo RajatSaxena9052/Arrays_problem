@@ -10,7 +10,7 @@ function reduce(array, callBack, startValue) {
             reducer = startValue
         }
         for (let i = 0; i < array.length; i++) {
-            reducer = callBack(reducer, array[i])
+            reducer = callBack(reducer, array[i], array);
         }
         return reducer
     }
